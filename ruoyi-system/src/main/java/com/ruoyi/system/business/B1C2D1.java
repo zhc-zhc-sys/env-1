@@ -1,0 +1,40 @@
+/*
+package com.ruoyi.system.business;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.ruoyi.common.utils.http.HttpUtils;
+import com.yomahub.liteflow.annotation.LiteflowComponent;
+import com.yomahub.liteflow.core.NodeComponent;
+import com.yomahub.liteflow.slot.DefaultContext;
+
+import java.util.Map;
+
+*/
+/**
+ * 结束节点
+ *//*
+
+@LiteflowComponent("B1C2D1")
+public class B1C2D1 extends NodeComponent {
+    @Override
+    public void process() throws Exception {
+        DefaultContext context = this.getContextBean(DefaultContext.class);
+        Integer O1 = context.getData("O1");
+        Integer P1 = context.getData("P1");
+
+        String ip="http://127.0.0.1:11909/system/businessService/callB1C2D1";
+        //调用controler的get请求
+        String param="a=7&O1="+O1+"&P1="+P1;
+        String rs= HttpUtils.sendGet(ip,param);
+        ObjectMapper objectMapper = new ObjectMapper();
+        // 将 JSON 转换为 Map
+        Map<String, Object> map = objectMapper.readValue(rs, Map.class);
+        Map<String, Object> dataMap = (Map<String, Object>) map.get("data");
+        int Q1 = ((Number) dataMap.get("Q1")).intValue();
+
+
+        context.setData("Q1",Q1);
+
+    }
+}
+*/

@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.example;
+
+// 定义一个简单的消息结构，包含一个 ID 和一个任意的参数
+message ServiceData {
+  string id = 1;      // 服务标识
+  string param = 2;   // 参数内容
+  int32 value = 3;    // 额外的值
+}
+
+// 服务1定义
+service Service1 {
+  rpc ProcessData(ServiceData) returns (ServiceData);
+}
+
+// 服务2定义
+service Service2 {
+  rpc ProcessData(ServiceData) returns (ServiceData);
+}
+
+// 服务3定义
+service Service3 {
+  rpc ProcessData(ServiceData) returns (ServiceData);
+}

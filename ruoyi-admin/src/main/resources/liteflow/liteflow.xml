@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow>
+<chain name="demoFlow">
+    THEN(
+    WHEN(node1,node2),
+    WHEN(node3,node1)
+    )
+</chain>
+<chain name="demoFlow2">
+    THEN(
+    WHEN(node1),
+    WHEN(node2),
+    WHEN(node3)
+    )
+</chain>
+</flow>
